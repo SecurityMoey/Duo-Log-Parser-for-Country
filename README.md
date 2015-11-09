@@ -1,11 +1,11 @@
 # Duo-Log-Parser-for-Country
 
-The DUO Security platform (www.duosecurity.com) allows an admin to block users in specific countries from using the Multi-Factor Authentication (MFA).  
+The DUO Security platform (www.duosecurity.com) allows an admin to block users in specific countries from using the Multi-Factor Authentication (MFA).  The feature is known as 'User Location' restrictions.
 
 <b>The Problem:</b>
 Geo-ip informaiton is not available for analysis
 
-In the web base admin console, the authentication logs will display geo-ip information (i.e country and city) for single authenication entries.  In order to implement the country block, I would like to review my all my authenication logs and see what countries my users have been authenicating from.  
+In the web base admin console, the authentication logs will display geo-ip information (i.e country and city) for single authenication entries.  In order to implement the country block, I would like to review my all my authenication logs and see what countries my users have been authenicating from.  This is currently not available in the web console or as an extract of the authenication logs.
 
 
 <b>Solution:</b>
