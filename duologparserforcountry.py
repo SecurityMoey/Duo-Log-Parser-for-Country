@@ -4,7 +4,6 @@ import csv
 import os
 import sys
 
-
 try:
     import pygeoip
 except ImportError:
