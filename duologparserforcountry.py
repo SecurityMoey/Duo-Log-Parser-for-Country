@@ -23,7 +23,7 @@ except IOError as e:
 print "First we need to know the name of the Authentication log \n Please make sure the file is in the directory you are running this script."
 
 sfile = raw_input("Duo Authentication Log File name: ")
-ofile = r'duologswcountry.csv'
+ofile = r'duologswcountry'
 fields = ["Timestamp", "User", "IP Address"]
 
 with open(sfile) as infile, open(ofile, "wb") as outfile:
@@ -33,13 +33,8 @@ with open(sfile) as infile, open(ofile, "wb") as outfile:
     for row in r:
         w.writerow(row)
 
-    if open(ofile) :
-        pass
-
 filename = ofile
-
 input_file = csv.DictReader(open(ofile))
-
 ip_add = (row["IP Address"])
 
 def country(filename):        
@@ -50,6 +45,8 @@ with open(filename, 'rb') as handle:
     reader = csv.reader(handle)
     writer = csv.writer(open('%s.csv' % filename, 'w'))
     for row in reader:
-        writer.writerow(row + [ country(row[1].strip()) ])
+        writer.writerow(row + [ country(ip_add) ])
+
+os.remove(ofile)
 
 print r"Script Complete. Please review duologswcountry.csv to see the results"
